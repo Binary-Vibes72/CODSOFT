@@ -10,20 +10,20 @@ char choice;
 bool flag = true;
 
 // Function Decoration
-int random();
-int userInput();
+void randomGen();
+void userInput();
 void program();
 void replay();
 void compare();
 
 // Function for random generating random int.
-int random(){
+void randomGen(){
     srand((unsigned) time(0));
     randomGuess = rand() % 10;
 }
 
 // Function for taking the user input.
-int userInput(){
+void userInput(){
     cout<<"Guess the Number: "<<endl;
     cin>>userGuess;
     compare();
@@ -35,8 +35,7 @@ void program(){
     cout<<endl;
     cout<<"----| Welcome to Number Guessing Game |----"<<endl;
     cout<<"Computer Guessed the number. Now it's your turn."<<endl;
-    random();
-    cout<<randomGuess;
+    randomGen();
     userInput();
 }
 
@@ -79,6 +78,7 @@ void compare(){
     }
 }
 
+//main function
 int main(){
     program();
 }
