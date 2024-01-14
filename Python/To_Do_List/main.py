@@ -84,14 +84,11 @@ def update_record(series_number):
     # Then open the data file with write mode and iterate through the inputfiledata variable. if the series_number is present in the list then skip the line from writing and print the rest of the file.     
     with open(database_file, 'w') as data:
         for number, line in enumerate(inputfiledata):
-            # print("Point")
-            print(number)
-            print([series_number])
-            if number == (series_number - 1):
+            if number == (series_number):
                 task_title = input("Enter the Task Title: ")
                 task_description = input("Enter the Task description: ")
                 task_time = time.ctime()
-                new_data = f"{series_number}# {task_title}# {task_description}# {task_time}\n"
+                new_data = f"{series_number + 1}# {task_title}# {task_description}# {task_time}\n"
                 data.write(new_data)
                 number + 1
             else:
@@ -107,7 +104,6 @@ def update():
             print("Please conferme the remove operation. This can not undo!!!")
             choice = input("Type 'yes' for processesing or Press any keyboard character and press enter to cancel: ")
             if choice == "yes":
-                # print("Point")
                 update_record(series_number)
                 break
             else:
