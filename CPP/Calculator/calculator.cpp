@@ -13,8 +13,8 @@ int main() {
         cin>>b;
 
         cout<<"Choice operation from following."<<endl;
-        cout<<"(1)---Addtion"<<endl; 
-        cout<<"(2)---Substraction"<<endl; 
+        cout<<"(1)---Addition"<<endl; 
+        cout<<"(2)---Subtraction"<<endl; 
         cout<<"(3)---Multiplication"<<endl; 
         cout<<"(4)---Division"<<endl;  
         cin>>choice;
@@ -23,7 +23,7 @@ int main() {
             cout<<"Addition of "<<a<<" and "<<b<<" is: "<<a+b<<endl;
         }
         else if(choice == 2){
-            cout<<"Substraction of "<<a<<" and "<<b<<" is: "<<a-b<<endl;
+            cout<<"Subtraction of "<<a<<" and "<<b<<" is: "<<a-b<<endl;
         }
         else if(choice == 3){
             cout<<"Multiplication of "<<a<<" and "<<b<<" is: "<<a*b<<endl;
